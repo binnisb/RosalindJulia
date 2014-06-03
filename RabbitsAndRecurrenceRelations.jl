@@ -40,8 +40,7 @@ function recurrence_relation(n,k)
     if n == 1 || n == 2
         return 1
     else
-        return BigInt(recurrence_relation(n-1,k)) + BigInt(3*recurrence_relation(n-2,k))
+        return recurrence_relation(n-1,k) + k*recurrence_relation(n-2,k)
     end
 end
 
-println(recurrence_relation(34,5))
